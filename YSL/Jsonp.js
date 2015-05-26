@@ -60,6 +60,10 @@
         return this;
     };
 
+    /**
+     * 设置服务器端确认的回调函数标识
+     * @param {string} callTag 函数标识
+     */
     Jsonp.prototype.setCallTag = function(callTag) {
         this.callTag = callTag;
 
@@ -67,7 +71,7 @@
     };
 
     ns.Jsonp = Jsonp;
-}((typeof YSL === 'object') ? YSL : window));
+}((YSL instanceof object && YSL.toString() == '[ Object object]') ? YSL : window));
 
 // Test
 
